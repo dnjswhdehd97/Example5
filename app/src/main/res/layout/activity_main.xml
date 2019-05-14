@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="779dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D4C1B8"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="품목"
+
+                android:singleLine="false" />
+
+            <Button
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#EEE6E1"
+                android:onClick="mOnClick"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="491dp"
+            android:accessibilityHeading="false"
+            android:choiceMode="multipleChoice" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TableLayout
+                    android:layout_width="285dp"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="142dp"
+                            android:layout_height="50dp"
+                            android:background="#EEE6E1"
+                            android:gravity="center"
+                            android:text="합계" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="142dp"
+                            android:layout_height="match_parent"
+                            android:background="#E9DBD5"
+                            android:gravity="center"
+                            android:text="원화" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/TextView3"
+                            android:layout_width="131dp"
+                            android:layout_height="50dp"
+                            android:background="#EEE6E1"
+                            android:gravity="center"
+                            android:text="200" />
+
+                        <TextView
+                            android:id="@+id/TextView4"
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:background="#E9DBD5"
+                            android:gravity="center"
+                            android:text="200" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <ImageButton
+                    android:id="@+id/QRbutton"
+                    android:layout_width="92dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="#E5E5E7"
+                    android:src="@android:drawable/ic_menu_camera" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
